@@ -7,8 +7,8 @@
       "type": "@n8n/n8n-nodes-langchain.mcpTrigger",
       "typeVersion": 2,
       "position": [
-        0,
-        0
+        16,
+        -16
       ],
       "id": "ec1a4d0d-dd47-4cbd-b35b-1724a236a98a",
       "name": "MCP Server Trigger",
@@ -17,17 +17,17 @@
     {
       "parameters": {
         "descriptionType": "manual",
-        "toolDescription": "Crea una o varias filas en Seatable",
-        "tableName": "Perfiles",
+        "toolDescription": "=Crea 1+ filas en la tabla indicada. Funciona con cualquier tabla; los datos de entrada se mapean a columnas con el mismo nombre.\nEntradas (vía $fromAI):\n\nTable_Name (string, obligatorio): nombre de la tabla.\n\nApply_Column_Default_Values (boolean, opcional): aplicar valores por defecto definidos en la columna.\n\nInputs_to_Ignore (string/array, opcional): campos del input a omitir.\nSalida: fila(s) creada(s) con su _id.",
+        "tableName": "={{ $fromAI('Table_Name', 'Perfiles', 'string') }}",
         "fieldsToSend": "autoMapInputData",
-        "apply_default": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Apply_Column_Default_Values', ``, 'boolean') }}",
-        "inputsToIgnore": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Inputs_to_Ignore', ``, 'string') }}"
+        "apply_default": "={{ $fromAI('Apply_Column_Default_Values', '', 'boolean') }}",
+        "inputsToIgnore": "={{ $fromAI('Inputs_to_Ignore', '', 'string') }}"
       },
       "type": "n8n-nodes-base.seaTableTool",
       "typeVersion": 2,
       "position": [
-        -224,
-        176
+        -320,
+        144
       ],
       "id": "c7edba59-1ae8-4190-a66e-cefbff2c661c",
       "name": "Crear una fila en Seatable",
@@ -41,16 +41,16 @@
     {
       "parameters": {
         "descriptionType": "manual",
-        "toolDescription": "Borra una o varias filas en Seatable",
+        "toolDescription": "=Elimina una fila por su identificador interno.\nEntradas:\n\nTable_Name (string): tabla objetivo.\n\nRow_Id (string): _id de la fila a borrar.\nSalida: confirmación del borrado.",
         "operation": "remove",
-        "tableName": "Perfiles",
-        "rowId": "={{ $json.row_id }}"
+        "tableName": "={{ $fromAI('Table_Name', 'Perfiles', 'string') }}",
+        "rowId": "={{ $fromAI('Row_Id', '', 'string') }}"
       },
       "type": "n8n-nodes-base.seaTableTool",
       "typeVersion": 2,
       "position": [
-        -96,
-        192
+        -192,
+        144
       ],
       "id": "ef1bdbb7-92e5-4f10-aab5-0478c2524305",
       "name": "Borrar una fila en Seatable",
@@ -64,17 +64,17 @@
     {
       "parameters": {
         "descriptionType": "manual",
-        "toolDescription": "Obtén datos de una o varias filas en Seatable",
+        "toolDescription": "=Devuelve el contenido completo de una fila por su _id.\nEntradas:\n\nTable_Name (string): tabla objetivo.\n\nRow_Id (string): _id de la fila.\nSalida: objeto de fila (todas las columnas).",
         "operation": "get",
-        "tableName": "Perfiles",
-        "rowId": "={{ $json.row_id }}",
+        "tableName": "={{ $fromAI('Table_Name', 'Perfiles', 'string') }}",
+        "rowId": "={{ $fromAI('Row_Id', '', 'string') }}",
         "options": {}
       },
       "type": "n8n-nodes-base.seaTableTool",
       "typeVersion": 2,
       "position": [
-        48,
-        208
+        -48,
+        144
       ],
       "id": "f8c01556-863f-4860-85e6-2c9c5ea959aa",
       "name": "Obtener una fila en SeaTable",
@@ -87,17 +87,19 @@
     },
     {
       "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "=Busca filas por igualdad exacta en una columna (útil para localizar por “ID del Usuario” u otros índices).\nEntradas:\n\nTable_Name (string): tabla objetivo.\n\nSearch_Column (string): nombre de la columna donde buscar (sensible a mayúsculas).\n\nSearch_Term (string): valor exacto a buscar.\nSalida: arreglo de filas que coinciden (puede estar vacío).",
         "operation": "search",
-        "tableName": "Perfiles",
-        "searchColumn": "ID del Usuario",
-        "searchTerm": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Search_Term', ``, 'string') }}",
+        "tableName": "={{ $fromAI('Table_Name', 'Perfiles', 'string') }}",
+        "searchColumn": "={{ $fromAI('Search_Column', 'ID del Usuario', 'string') }}",
+        "searchTerm": "={{ $fromAI('Search_Term', '', 'string') }}",
         "options": {}
       },
       "type": "n8n-nodes-base.seaTableTool",
       "typeVersion": 2,
       "position": [
-        240,
-        208
+        96,
+        144
       ],
       "id": "a4168bb5-0ba1-456f-9b77-e4011ab3d068",
       "name": "Busca una fila en Seatable",
@@ -110,24 +112,87 @@
     },
     {
       "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "=Actualiza columnas específicas de una fila existente.\nLlama a este tool únicamente si vas a enviar al menos un par columna: valor.\nEntrada (JSON vía $fromAI)\n\nTable_Name (string, obligatorio)\n\nRow_Id (string, obligatorio)\n\nAdemás, 1+ pares NombreDeColumna: valor.\nEjemplo de llamada correcta:\n\n{\n  \"Table_Name\": \"Perfiles\",\n  \"Row_Id\": \"NijVsF9qTq29IWXlIRef1g\",\n  \"Nombre\": \"Miguel\",\n  \"Categoría\": \"Normal\",\n  \"Perfil\": \"Estudiante\",\n  \"Estudiante (Grado)\": \"Décimo (10)\",\n  \"Estudiante (Salón)\": \"5\"\n}\n\nNo llames a este tool si no tienes al menos una columna para actualizar.",
         "operation": "update",
-        "tableName": "Perfiles",
-        "rowId": "={{ $json.row_id }}"
+        "tableName": "={{ $fromAI('Table_Name', 'Perfiles', 'string') }}",
+        "rowId": "={{ $fromAI('Row_Id', '', 'string') }}",
+        "fieldsToSend": "autoMapInputData"
       },
       "type": "n8n-nodes-base.seaTableTool",
       "typeVersion": 2,
       "position": [
-        384,
-        192
+        256,
+        144
       ],
       "id": "9d2a6b8e-6b7f-461b-a209-671c79401d47",
-      "name": "Update a row in SeaTable1",
+      "name": "Actualiza una fila en Seatable",
       "credentials": {
         "seaTableApi": {
           "id": "TOUy6ismIsfT8pRI",
           "name": "SeaTable account"
         }
       }
+    },
+    {
+      "parameters": {
+        "toolDescription": "=Obtiene access_token, dtable_uuid y dtable_server para la base. Debe llamarse antes de pedir metadata.\nEntradas:\n\nbase_uuid (string) o base_name (string) de la base.\nSalida: access_token (≈1 h de vida), dtable_uuid, dtable_server.",
+        "url": "https://cloud.seatable.io/api/v2.1/dtable/app-access-token/",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "base_uuid",
+              "value": "={{ $fromAI('base_uuid', '', 'string') }}"
+            },
+            {
+              "name": "base_name",
+              "value": "={{ $fromAI('base_name', '', 'string') }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2,
+      "position": [
+        400,
+        144
+      ],
+      "id": "88d1a627-caf0-4625-a8a4-7105c8d32dc6",
+      "name": "HTTP Request (Obtener app access token)",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "6gHTMq22nRDCCg5s",
+          "name": "Header Auth account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "=Recupera el esquema completo de la base: tablas, columnas, tipos, opciones de select y configuraciones de cascada.\nEntradas:\n\ndtable_server (string), dtable_uuid (string), access_token (string).\nSalida: objeto de metadata con tables[], columns[] y sus propiedades (incluye opciones y cascadas).",
+        "url": "={{ $fromAI('dtable_server', '', 'string') + '/dtable-server/api/v1/dtables/' + $fromAI('dtable_uuid', '', 'string') + '/metadata/' }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "={{ 'Token ' + $fromAI('access_token', '', 'string') }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2,
+      "position": [
+        544,
+        144
+      ],
+      "id": "1fc69798-d5dc-4f32-905b-823f03a26294",
+      "name": "HTTP Request1 (Obtener metadata de la base)"
     }
   ],
   "connections": {
@@ -175,7 +240,29 @@
         ]
       ]
     },
-    "Update a row in SeaTable1": {
+    "Actualiza una fila en Seatable": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request (Obtener app access token)": {
+      "ai_tool": [
+        [
+          {
+            "node": "MCP Server Trigger",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1 (Obtener metadata de la base)": {
       "ai_tool": [
         [
           {
