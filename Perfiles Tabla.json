@@ -1,0 +1,1537 @@
+[
+  {
+    "tables": [
+      {
+        "_id": "0000",
+        "name": "Perfiles",
+        "columns": [
+          {
+            "key": "0000",
+            "name": "ID del Usuario",
+            "type": "text",
+            "width": 200,
+            "editable": true,
+            "resizable": true
+          },
+          {
+            "key": "pw9A",
+            "type": "text",
+            "name": "Nombre",
+            "editable": true,
+            "width": 200,
+            "resizable": true,
+            "draggable": true,
+            "data": {
+              "enable_fill_default_value": false,
+              "enable_check_format": false,
+              "format_specification_value": null,
+              "default_value": "",
+              "format_check_type": "custom_format"
+            },
+            "permission_type": "",
+            "permitted_users": [],
+            "permitted_group": [],
+            "edit_metadata_permission_type": "",
+            "edit_metadata_permitted_users": [],
+            "edit_metadata_permitted_group": [],
+            "description": null,
+            "colorbys": {}
+          },
+          {
+            "key": "Pt8h",
+            "type": "single-select",
+            "name": "Categoría",
+            "editable": true,
+            "width": 200,
+            "resizable": true,
+            "draggable": true,
+            "data": {
+              "options": [
+                {
+                  "name": "Normal",
+                  "color": "#9F8CF1",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#8F75E2",
+                  "id": "384429"
+                },
+                {
+                  "name": "Especial",
+                  "color": "#4ECCCB",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#45BAB9",
+                  "id": "508878"
+                }
+              ]
+            },
+            "permission_type": "",
+            "permitted_users": [],
+            "permitted_group": [],
+            "edit_metadata_permission_type": "",
+            "edit_metadata_permitted_users": [],
+            "edit_metadata_permitted_group": [],
+            "description": null,
+            "colorbys": {}
+          },
+          {
+            "key": "4L1v",
+            "type": "single-select",
+            "name": "Perfil",
+            "editable": true,
+            "width": 200,
+            "resizable": true,
+            "draggable": true,
+            "data": {
+              "cascade_column_key": "Pt8h",
+              "cascade_settings": {
+                "384429": [
+                  "963093",
+                  "781413",
+                  "854999"
+                ]
+              },
+              "options": [
+                {
+                  "name": "Estudiante",
+                  "color": "#4ECCCB",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#45BAB9",
+                  "id": "963093"
+                },
+                {
+                  "name": "Padre de Familia",
+                  "color": "#FBD44A",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#E5C142",
+                  "id": "781413"
+                },
+                {
+                  "name": "Público General",
+                  "color": "#F4667C",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#DC556A",
+                  "id": "854999"
+                }
+              ]
+            },
+            "permission_type": "",
+            "permitted_users": [],
+            "permitted_group": [],
+            "edit_metadata_permission_type": "",
+            "edit_metadata_permitted_users": [],
+            "edit_metadata_permitted_group": [],
+            "description": null,
+            "colorbys": {}
+          },
+          {
+            "key": "O765",
+            "type": "single-select",
+            "name": "Estudiante (Nivel)",
+            "editable": true,
+            "width": 200,
+            "resizable": true,
+            "draggable": true,
+            "data": {
+              "options": [
+                {
+                  "name": "Primaria",
+                  "color": "#9F8CF1",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#8F75E2",
+                  "id": "479414"
+                },
+                {
+                  "name": "Secundaria",
+                  "color": "#EAA775",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#D59361",
+                  "id": "871657"
+                },
+                {
+                  "name": "Media",
+                  "color": "#DC82D2",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#D166C5",
+                  "id": "680961"
+                }
+              ],
+              "cascade_column_key": "4L1v",
+              "cascade_settings": {
+                "963093": [
+                  "158828",
+                  "871657",
+                  "680961",
+                  "479414"
+                ]
+              }
+            },
+            "permission_type": "",
+            "permitted_users": [],
+            "permitted_group": [],
+            "edit_metadata_permission_type": "",
+            "edit_metadata_permitted_users": [],
+            "edit_metadata_permitted_group": [],
+            "description": null,
+            "colorbys": {}
+          },
+          {
+            "key": "vEb7",
+            "type": "single-select",
+            "name": "Estudiante (Grado)",
+            "editable": true,
+            "width": 200,
+            "resizable": true,
+            "draggable": true,
+            "data": {
+              "options": [
+                {
+                  "name": "Primero (1)",
+                  "color": "#EAA775",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#D59361",
+                  "id": "877027"
+                },
+                {
+                  "name": "Segundo (2)",
+                  "color": "#9860E5",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#844BD2",
+                  "id": "364108"
+                },
+                {
+                  "name": "Tercero (3)",
+                  "color": "#DC82D2",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#D166C5",
+                  "id": "469375"
+                },
+                {
+                  "name": "Cuarto (4)",
+                  "color": "#46A1FD",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#3C8FE4",
+                  "id": "895979"
+                },
+                {
+                  "name": "Quinto (5)",
+                  "color": "#89D2EA",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#7BC0D6",
+                  "id": "669819"
+                },
+                {
+                  "name": "Sexto (6)",
+                  "color": "#F4667C",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#DC556A",
+                  "id": "370884"
+                },
+                {
+                  "name": "Séptimo (7)",
+                  "color": "#FBD44A",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#E5C142",
+                  "id": "815555"
+                },
+                {
+                  "name": "Octavo (8)",
+                  "color": "#ADDF84",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#9CCF72",
+                  "id": "382301"
+                },
+                {
+                  "name": "Noveno (9)",
+                  "color": "#9F8CF1",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#8F75E2",
+                  "id": "520278"
+                },
+                {
+                  "name": "Décimo (10)",
+                  "color": "#4ECCCB",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#45BAB9",
+                  "id": "611013"
+                },
+                {
+                  "name": "Undécimo (11)",
+                  "color": "#59CB74",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#4EB867",
+                  "id": "381102"
+                }
+              ],
+              "cascade_column_key": "O765",
+              "cascade_settings": {
+                "479414": [
+                  "877027",
+                  "364108",
+                  "469375",
+                  "895979",
+                  "669819"
+                ],
+                "680961": [
+                  "611013",
+                  "381102"
+                ],
+                "871657": [
+                  "370884",
+                  "815555",
+                  "382301",
+                  "520278"
+                ]
+              }
+            },
+            "permission_type": "",
+            "permitted_users": [],
+            "permitted_group": [],
+            "edit_metadata_permission_type": "",
+            "edit_metadata_permitted_users": [],
+            "edit_metadata_permitted_group": [],
+            "description": null,
+            "colorbys": {}
+          },
+          {
+            "key": "hKXr",
+            "type": "single-select",
+            "name": "Estudiante (Salón)",
+            "editable": true,
+            "width": 200,
+            "resizable": true,
+            "draggable": true,
+            "data": {
+              "options": [
+                {
+                  "name": "1",
+                  "color": "#46A1FD",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#3C8FE4",
+                  "id": "73194"
+                },
+                {
+                  "name": "2",
+                  "color": "#F4667C",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#DC556A",
+                  "id": "445830"
+                },
+                {
+                  "name": "3",
+                  "color": "#DC82D2",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#D166C5",
+                  "id": "637023"
+                },
+                {
+                  "name": "4",
+                  "color": "#9F8CF1",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#8F75E2",
+                  "id": "62139"
+                },
+                {
+                  "name": "5",
+                  "color": "#FBD44A",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#E5C142",
+                  "id": "518254"
+                },
+                {
+                  "name": "6",
+                  "color": "#9860E5",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#844BD2",
+                  "id": "624103"
+                }
+              ],
+              "cascade_column_key": "vEb7",
+              "cascade_settings": {
+                "364108": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "370884": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "381102": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "382301": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "469375": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "520278": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "611013": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "669819": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "815555": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "877027": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "895979": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ]
+              }
+            },
+            "permission_type": "",
+            "permitted_users": [],
+            "permitted_group": [],
+            "edit_metadata_permission_type": "",
+            "edit_metadata_permitted_users": [],
+            "edit_metadata_permitted_group": [],
+            "description": null,
+            "colorbys": {}
+          },
+          {
+            "key": "OOPP",
+            "type": "single-select",
+            "name": "Padre de Familia (Número de estudiantes)",
+            "editable": true,
+            "width": 344.79998779296875,
+            "resizable": true,
+            "draggable": true,
+            "data": {
+              "options": [
+                {
+                  "name": "1",
+                  "color": "#59CB74",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#4EB867",
+                  "id": "175919"
+                },
+                {
+                  "name": "2",
+                  "color": "#89D2EA",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#7BC0D6",
+                  "id": "54385"
+                },
+                {
+                  "name": "3",
+                  "color": "#4ECCCB",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#45BAB9",
+                  "id": "748004"
+                }
+              ],
+              "cascade_column_key": "4L1v",
+              "cascade_settings": {
+                "781413": [
+                  "175919",
+                  "54385",
+                  "748004",
+                  "445011",
+                  "627224"
+                ]
+              }
+            },
+            "permission_type": "",
+            "permitted_users": [],
+            "permitted_group": [],
+            "edit_metadata_permission_type": "",
+            "edit_metadata_permitted_users": [],
+            "edit_metadata_permitted_group": [],
+            "description": "El número de estudiantes que el Padre de Familia tiene dentro de la institución",
+            "colorbys": {}
+          },
+          {
+            "key": "CoLo",
+            "type": "single-select",
+            "name": "Padre de Familia (Nivel Estudiante 1)",
+            "editable": true,
+            "width": 298,
+            "resizable": true,
+            "draggable": true,
+            "data": {
+              "cascade_column_key": "OOPP",
+              "cascade_settings": {
+                "54385": [
+                  "371481",
+                  "952456",
+                  "925734"
+                ],
+                "175919": [
+                  "371481",
+                  "952456",
+                  "925734"
+                ],
+                "445011": [
+                  "371481",
+                  "952456",
+                  "925734"
+                ],
+                "627224": [
+                  "371481",
+                  "952456",
+                  "925734"
+                ],
+                "748004": [
+                  "371481",
+                  "952456",
+                  "925734"
+                ]
+              },
+              "options": [
+                {
+                  "name": "Primaria",
+                  "color": "#EAA775",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#D59361",
+                  "id": "371481"
+                },
+                {
+                  "name": "Secundaria",
+                  "color": "#ADDF84",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#9CCF72",
+                  "id": "952456"
+                },
+                {
+                  "name": "Media",
+                  "color": "#F4667C",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#DC556A",
+                  "id": "925734"
+                }
+              ]
+            },
+            "permission_type": "",
+            "permitted_users": [],
+            "permitted_group": [],
+            "edit_metadata_permission_type": "",
+            "edit_metadata_permitted_users": [],
+            "edit_metadata_permitted_group": [],
+            "description": null,
+            "colorbys": {}
+          },
+          {
+            "key": "P2CW",
+            "type": "single-select",
+            "name": "Padre de Familia (Grado Estudiante 1)",
+            "editable": true,
+            "width": 308,
+            "resizable": true,
+            "draggable": true,
+            "data": {
+              "options": [
+                {
+                  "name": "Primero (1)",
+                  "color": "#EAA775",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#D59361",
+                  "id": "877027"
+                },
+                {
+                  "name": "Segundo (2)",
+                  "color": "#9860E5",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#844BD2",
+                  "id": "364108"
+                },
+                {
+                  "name": "Tercero (3)",
+                  "color": "#DC82D2",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#D166C5",
+                  "id": "469375"
+                },
+                {
+                  "name": "Cuarto (4)",
+                  "color": "#46A1FD",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#3C8FE4",
+                  "id": "895979"
+                },
+                {
+                  "name": "Quinto (5)",
+                  "color": "#89D2EA",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#7BC0D6",
+                  "id": "669819"
+                },
+                {
+                  "name": "Sexto (6)",
+                  "color": "#F4667C",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#DC556A",
+                  "id": "370884"
+                },
+                {
+                  "name": "Séptimo (7)",
+                  "color": "#FBD44A",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#E5C142",
+                  "id": "815555"
+                },
+                {
+                  "name": "Octavo (8)",
+                  "color": "#ADDF84",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#9CCF72",
+                  "id": "382301"
+                },
+                {
+                  "name": "Noveno (9)",
+                  "color": "#9F8CF1",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#8F75E2",
+                  "id": "520278"
+                },
+                {
+                  "name": "Décimo (10)",
+                  "color": "#4ECCCB",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#45BAB9",
+                  "id": "611013"
+                },
+                {
+                  "name": "Undécimo (11)",
+                  "color": "#59CB74",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#4EB867",
+                  "id": "381102"
+                }
+              ],
+              "cascade_column_key": "CoLo",
+              "cascade_settings": {
+                "371481": [
+                  "877027",
+                  "364108",
+                  "469375",
+                  "895979",
+                  "669819"
+                ],
+                "925734": [
+                  "611013",
+                  "381102"
+                ],
+                "952456": [
+                  "370884",
+                  "815555",
+                  "382301",
+                  "520278"
+                ]
+              }
+            },
+            "permission_type": "",
+            "permitted_users": [],
+            "permitted_group": [],
+            "edit_metadata_permission_type": "",
+            "edit_metadata_permitted_users": [],
+            "edit_metadata_permitted_group": [],
+            "description": null,
+            "colorbys": {}
+          },
+          {
+            "key": "937P",
+            "type": "single-select",
+            "name": "Padre de Familia (Salón Estudiante 1)",
+            "editable": true,
+            "width": 288,
+            "resizable": true,
+            "draggable": true,
+            "data": {
+              "options": [
+                {
+                  "name": "1",
+                  "color": "#46A1FD",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#3C8FE4",
+                  "id": "73194"
+                },
+                {
+                  "name": "2",
+                  "color": "#F4667C",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#DC556A",
+                  "id": "445830"
+                },
+                {
+                  "name": "3",
+                  "color": "#DC82D2",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#D166C5",
+                  "id": "637023"
+                },
+                {
+                  "name": "4",
+                  "color": "#9F8CF1",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#8F75E2",
+                  "id": "62139"
+                },
+                {
+                  "name": "5",
+                  "color": "#FBD44A",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#E5C142",
+                  "id": "518254"
+                },
+                {
+                  "name": "6",
+                  "color": "#9860E5",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#844BD2",
+                  "id": "624103"
+                }
+              ],
+              "cascade_column_key": "P2CW",
+              "cascade_settings": {
+                "364108": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "370884": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "381102": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "382301": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "469375": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "520278": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "611013": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "669819": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "815555": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "877027": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "895979": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ]
+              }
+            },
+            "permission_type": "",
+            "permitted_users": [],
+            "permitted_group": [],
+            "edit_metadata_permission_type": "",
+            "edit_metadata_permitted_users": [],
+            "edit_metadata_permitted_group": [],
+            "description": null,
+            "colorbys": {}
+          },
+          {
+            "key": "dX5g",
+            "type": "single-select",
+            "name": "Padre de Familia (Nivel Estudiante 2)",
+            "editable": true,
+            "width": 298,
+            "resizable": true,
+            "draggable": true,
+            "data": {
+              "cascade_column_key": "OOPP",
+              "cascade_settings": {
+                "54385": [
+                  "371481",
+                  "952456",
+                  "925734"
+                ],
+                "175919": [],
+                "445011": [
+                  "371481",
+                  "952456",
+                  "925734"
+                ],
+                "627224": [
+                  "371481",
+                  "952456",
+                  "925734"
+                ],
+                "748004": [
+                  "371481",
+                  "952456",
+                  "925734"
+                ]
+              },
+              "options": [
+                {
+                  "name": "Primaria",
+                  "color": "#EAA775",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#D59361",
+                  "id": "371481"
+                },
+                {
+                  "name": "Secundaria",
+                  "color": "#ADDF84",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#9CCF72",
+                  "id": "952456"
+                },
+                {
+                  "name": "Media",
+                  "color": "#F4667C",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#DC556A",
+                  "id": "925734"
+                }
+              ]
+            },
+            "permission_type": "",
+            "permitted_users": [],
+            "permitted_group": [],
+            "edit_metadata_permission_type": "",
+            "edit_metadata_permitted_users": [],
+            "edit_metadata_permitted_group": [],
+            "description": null,
+            "colorbys": {}
+          },
+          {
+            "key": "Zl4o",
+            "type": "single-select",
+            "name": "Padre de Familia (Grado Estudiante 2)",
+            "editable": true,
+            "width": 308,
+            "resizable": true,
+            "draggable": true,
+            "data": {
+              "options": [
+                {
+                  "name": "Primero (1)",
+                  "color": "#EAA775",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#D59361",
+                  "id": "877027"
+                },
+                {
+                  "name": "Segundo (2)",
+                  "color": "#9860E5",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#844BD2",
+                  "id": "364108"
+                },
+                {
+                  "name": "Tercero (3)",
+                  "color": "#DC82D2",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#D166C5",
+                  "id": "469375"
+                },
+                {
+                  "name": "Cuarto (4)",
+                  "color": "#46A1FD",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#3C8FE4",
+                  "id": "895979"
+                },
+                {
+                  "name": "Quinto (5)",
+                  "color": "#89D2EA",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#7BC0D6",
+                  "id": "669819"
+                },
+                {
+                  "name": "Sexto (6)",
+                  "color": "#F4667C",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#DC556A",
+                  "id": "370884"
+                },
+                {
+                  "name": "Séptimo (7)",
+                  "color": "#FBD44A",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#E5C142",
+                  "id": "815555"
+                },
+                {
+                  "name": "Octavo (8)",
+                  "color": "#ADDF84",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#9CCF72",
+                  "id": "382301"
+                },
+                {
+                  "name": "Noveno (9)",
+                  "color": "#9F8CF1",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#8F75E2",
+                  "id": "520278"
+                },
+                {
+                  "name": "Décimo (10)",
+                  "color": "#4ECCCB",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#45BAB9",
+                  "id": "611013"
+                },
+                {
+                  "name": "Undécimo (11)",
+                  "color": "#59CB74",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#4EB867",
+                  "id": "381102"
+                }
+              ],
+              "cascade_column_key": "dX5g",
+              "cascade_settings": {
+                "371481": [
+                  "877027",
+                  "364108",
+                  "469375",
+                  "895979",
+                  "669819"
+                ],
+                "925734": [
+                  "611013",
+                  "381102"
+                ],
+                "952456": [
+                  "370884",
+                  "815555",
+                  "382301",
+                  "520278"
+                ]
+              }
+            },
+            "permission_type": "",
+            "permitted_users": [],
+            "permitted_group": [],
+            "edit_metadata_permission_type": "",
+            "edit_metadata_permitted_users": [],
+            "edit_metadata_permitted_group": [],
+            "description": null,
+            "colorbys": {}
+          },
+          {
+            "key": "jNvJ",
+            "type": "single-select",
+            "name": "Padre de Familia (Salón Estudiante 2)",
+            "editable": true,
+            "width": 292.79998779296875,
+            "resizable": true,
+            "draggable": true,
+            "data": {
+              "options": [
+                {
+                  "name": "1",
+                  "color": "#46A1FD",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#3C8FE4",
+                  "id": "73194"
+                },
+                {
+                  "name": "2",
+                  "color": "#F4667C",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#DC556A",
+                  "id": "445830"
+                },
+                {
+                  "name": "3",
+                  "color": "#DC82D2",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#D166C5",
+                  "id": "637023"
+                },
+                {
+                  "name": "4",
+                  "color": "#9F8CF1",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#8F75E2",
+                  "id": "62139"
+                },
+                {
+                  "name": "5",
+                  "color": "#FBD44A",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#E5C142",
+                  "id": "518254"
+                },
+                {
+                  "name": "6",
+                  "color": "#9860E5",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#844BD2",
+                  "id": "624103"
+                }
+              ],
+              "cascade_column_key": "Zl4o",
+              "cascade_settings": {
+                "364108": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "370884": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "381102": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "382301": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "469375": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "520278": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "611013": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "669819": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "815555": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "877027": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "895979": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ]
+              }
+            },
+            "permission_type": "",
+            "permitted_users": [],
+            "permitted_group": [],
+            "edit_metadata_permission_type": "",
+            "edit_metadata_permitted_users": [],
+            "edit_metadata_permitted_group": [],
+            "description": null,
+            "colorbys": {}
+          },
+          {
+            "key": "b6N2",
+            "type": "single-select",
+            "name": "Padre de Familia (Nivel Estudiante 3)",
+            "editable": true,
+            "width": 298,
+            "resizable": true,
+            "draggable": true,
+            "data": {
+              "cascade_column_key": "OOPP",
+              "cascade_settings": {
+                "54385": [],
+                "175919": [],
+                "445011": [
+                  "371481",
+                  "952456",
+                  "925734"
+                ],
+                "627224": [
+                  "371481",
+                  "952456",
+                  "925734"
+                ],
+                "748004": [
+                  "371481",
+                  "952456",
+                  "925734"
+                ]
+              },
+              "options": [
+                {
+                  "name": "Primaria",
+                  "color": "#EAA775",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#D59361",
+                  "id": "371481"
+                },
+                {
+                  "name": "Secundaria",
+                  "color": "#ADDF84",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#9CCF72",
+                  "id": "952456"
+                },
+                {
+                  "name": "Media",
+                  "color": "#F4667C",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#DC556A",
+                  "id": "925734"
+                }
+              ]
+            },
+            "permission_type": "",
+            "permitted_users": [],
+            "permitted_group": [],
+            "edit_metadata_permission_type": "",
+            "edit_metadata_permitted_users": [],
+            "edit_metadata_permitted_group": [],
+            "description": null,
+            "colorbys": {}
+          },
+          {
+            "key": "8p0m",
+            "type": "single-select",
+            "name": "Padre de Familia (Grado Estudiante 3)",
+            "editable": true,
+            "width": 308,
+            "resizable": true,
+            "draggable": true,
+            "data": {
+              "options": [
+                {
+                  "name": "Primero (1)",
+                  "color": "#EAA775",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#D59361",
+                  "id": "877027"
+                },
+                {
+                  "name": "Segundo (2)",
+                  "color": "#9860E5",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#844BD2",
+                  "id": "364108"
+                },
+                {
+                  "name": "Tercero (3)",
+                  "color": "#DC82D2",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#D166C5",
+                  "id": "469375"
+                },
+                {
+                  "name": "Cuarto (4)",
+                  "color": "#46A1FD",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#3C8FE4",
+                  "id": "895979"
+                },
+                {
+                  "name": "Quinto (5)",
+                  "color": "#89D2EA",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#7BC0D6",
+                  "id": "669819"
+                },
+                {
+                  "name": "Sexto (6)",
+                  "color": "#F4667C",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#DC556A",
+                  "id": "370884"
+                },
+                {
+                  "name": "Séptimo (7)",
+                  "color": "#FBD44A",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#E5C142",
+                  "id": "815555"
+                },
+                {
+                  "name": "Octavo (8)",
+                  "color": "#ADDF84",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#9CCF72",
+                  "id": "382301"
+                },
+                {
+                  "name": "Noveno (9)",
+                  "color": "#9F8CF1",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#8F75E2",
+                  "id": "520278"
+                },
+                {
+                  "name": "Décimo (10)",
+                  "color": "#4ECCCB",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#45BAB9",
+                  "id": "611013"
+                },
+                {
+                  "name": "Undécimo (11)",
+                  "color": "#59CB74",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#4EB867",
+                  "id": "381102"
+                }
+              ],
+              "cascade_column_key": "b6N2",
+              "cascade_settings": {
+                "371481": [
+                  "877027",
+                  "364108",
+                  "469375",
+                  "895979",
+                  "669819"
+                ],
+                "925734": [
+                  "611013",
+                  "381102"
+                ],
+                "952456": [
+                  "370884",
+                  "815555",
+                  "382301",
+                  "520278"
+                ]
+              }
+            },
+            "permission_type": "",
+            "permitted_users": [],
+            "permitted_group": [],
+            "edit_metadata_permission_type": "",
+            "edit_metadata_permitted_users": [],
+            "edit_metadata_permitted_group": [],
+            "description": null,
+            "colorbys": {}
+          },
+          {
+            "key": "JGo6",
+            "type": "single-select",
+            "name": "Padre de Familia (Salón Estudiante 3)",
+            "editable": true,
+            "width": 292.79998779296875,
+            "resizable": true,
+            "draggable": true,
+            "data": {
+              "options": [
+                {
+                  "name": "1",
+                  "color": "#46A1FD",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#3C8FE4",
+                  "id": "73194"
+                },
+                {
+                  "name": "2",
+                  "color": "#F4667C",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#DC556A",
+                  "id": "445830"
+                },
+                {
+                  "name": "3",
+                  "color": "#DC82D2",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#D166C5",
+                  "id": "637023"
+                },
+                {
+                  "name": "4",
+                  "color": "#9F8CF1",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#8F75E2",
+                  "id": "62139"
+                },
+                {
+                  "name": "5",
+                  "color": "#FBD44A",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#E5C142",
+                  "id": "518254"
+                },
+                {
+                  "name": "6",
+                  "color": "#9860E5",
+                  "textColor": "#FFFFFF",
+                  "borderColor": "#844BD2",
+                  "id": "624103"
+                }
+              ],
+              "cascade_column_key": "8p0m",
+              "cascade_settings": {
+                "364108": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "370884": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "381102": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "382301": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "469375": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "520278": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "611013": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "669819": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "815555": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "877027": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ],
+                "895979": [
+                  "73194",
+                  "445830",
+                  "637023",
+                  "62139",
+                  "518254",
+                  "624103"
+                ]
+              }
+            },
+            "permission_type": "",
+            "permitted_users": [],
+            "permitted_group": [],
+            "edit_metadata_permission_type": "",
+            "edit_metadata_permitted_users": [],
+            "edit_metadata_permitted_group": [],
+            "description": null,
+            "colorbys": {}
+          }
+        ],
+        "views": [
+          {
+            "_id": "0000",
+            "name": "Default View",
+            "type": "table",
+            "is_locked": false,
+            "rows": [],
+            "formula_rows": {},
+            "summaries": [],
+            "filter_conjunction": "And",
+            "filters": [],
+            "sorts": [],
+            "hidden_columns": [],
+            "groupbys": [],
+            "groups": []
+          }
+        ]
+      }
+    ],
+    "version": 656,
+    "format_version": 9
+  }
+]
